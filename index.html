@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.PNG" type="img/icon">
+   <link rel="stylesheet" href="https://unpkg.com/98.css" />
+  <title>:0!!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="layout-container">
+   <!--columna izquierda: estampillas -->
+   <aside class="stamp-sidebar">
+    <img src="img/stamp1.gif" alt="estampilla 1">
+    <img src="img/stamp2.gif" alt="estampilla 2">
+    <img src="img/stamp3.png" alt="estampilla 3">
+    <img src="img/stamp4.gif" alt="estampilla 4">
+    <img src="img/stamp5.png" alt="estampilla 5">
+    <img src="img/stamp6.gif" alt="estampilla 6">
+    <img src="img/stamp7.png" alt="estampilla 7">
+    </aside>
+    </div>
+    
+  <div class="site-wrapper">
+
+    <header class="retro-box header">
+      <h1>BIENVENIDO AL SITIO DE KIMONTEY(YO)!!! </h1>
+      <marquee scrollamount="5"> >> ESTADO: EN CONSTRUCCION -- POR FAVOR TENER PACIENCIA << </marquee>
+    </header>
+
+    <div class="layout-grid">
+
+      <aside class="sidebar">
+        
+        <div class="retro-box widget">
+          <h3> ★ RADIO VOCALOID 24/7</h3>
+          
+          <div class="custom-player">
+            <div class="live-status">
+              <span class="red-dot"></span>
+              <span class="live-text">EN VIVO</span>
+            </div>
+        
+            <button id="radioBtn" class="retro-btn" onclick="toggleRadio()">[ REPRODUCIR ]</button>
+          </div>
+        
+          <audio id="radioStream" preload="none">
+            <source src="https://vocaloid.radioca.st/stream" type="audio/mpeg">
+            <source src="https://vocaloidradio.com/" type="audio/x-scpls">
+          </audio>
+        </div>
+
+        <div class="retro-box widget">
+          <h3>★ SOBRE MI </h3>
+          <p><strong>Alias:</strong> kimontey</p>
+          <p><strong>Rol:</strong> estudiante de ing. en computación</p>
+          <p><strong>Status:</strong> durmiendo -_-</p>
+        </div>
+
+        <div class="retro-box widget">
+          <h3>★ INTERESES </h3>
+          <ul>
+            <li>Hatsune Miku & Vocaloid</li>
+            <li>Juegos Indie</li>
+            <li>Arte digital </li>
+            <li>Anime</li>
+          </ul>
+        </div>
+
+        <div class="retro-box widget">
+          <h3>[ ENLACES ]</h3>
+          <p><a href="https://kimontey.neocities.org/galeria">> Mi Galeria</a></p>
+          <p><a href="#">> Proyectos</a></p>
+          <p><a href="#" class="enlace-discreto">> Registro_00.dat</a></p>
+        </div>
+
+      </aside>
+
+      <main class="main-content">
+
+        <article class="retro-box post">
+          <img src="img/miku_vibe.gif" alt="mood" class="post-mood">
+          
+          <div class="post-header">
+            <h2>01: Mi Primer Blog?!?¿!?!¿</h2>
+            <span class="post-date">[ 2026.08.23 // 17:15 ]</span>
+          </div>
+          <hr>
+          <div class="post-body">
+            <p>Bienvenido a mi sitio. Este espacio funciona como blog personal, archivo artistico y sitio de pruebas para experimentos de programacion.</p>
+            <p>Por ahora está organizado pero espero que se vuelva un caos.</p>
+          </div>
+        </article>
+
+        <article class="retro-box post">
+          <img src="img/llorando_fuerte.gif" alt="mood" class="post-mood">
+          
+          <div class="post-header">
+            <h2>02: Clases (oh no)</h2>
+            <span class="post-date">[ 2026.08.27 // 09:40 ]</span>
+          </div>
+          <hr>
+          <div class="post-body">
+            <p>Que tragedia. Tengo clases (lo peor experiencia para un ser humano/j). Igualmente no he podido avanzar mucho en el sitio :P.</p>
+            <p>Se ve horrible en telefono, asi que probablemente sufra reescribiendo todo el html y el css para que se vea bien.</p>
+          </div>
+        </article>
+        
+      </main>
+
+    </div>
+
+    <footer class="retro-box footer">
+      <p>Optimizado para 800x600 - © 2026</p>
+    </footer>
+
+  </div>
+
+<script>
+  const audio = document.getElementById('radioStream');
+  const btn = document.getElementById('radioBtn');
+
+  function toggleRadio() {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = '[ DETENER ]';
+    } else {
+      audio.pause();
+      btn.textContent = '[ REPRODUCIR ]';
+    }
+  }
+</script>
+</body>
+</html>
