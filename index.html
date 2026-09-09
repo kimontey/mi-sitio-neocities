@@ -29,11 +29,11 @@
     <img src="img/stamp14.webp" alt="estampilla 14">
     <img src="img/stamp15.gif" alt="estampilla 15">
    </aside>
-    
+
   <div class="site-wrapper">
     <header class="retro-box header">
       <h1>BIENVENIDO AL SITIO DE KIMONTEY(YO)!!! </h1>
-      <marquee scrollamount="5"> >> ESTADO: EN CONSTRUCCION -- POR FAVOR TENER PACIENCIA << </marquee>
+      <marquee scrollamount="5">  ESTA PÁGINA ESTÁ EN CONSTRUCCIÓN -- POR FAVOR TENER PACIENCIA  </marquee>
     </header>
 
     <div class="layout-grid">
@@ -78,8 +78,8 @@
         <div class="retro-box widget">
           <h3>[ ENLACES ]</h3>
           <p><a href="https://kimontey.neocities.org/galeria">> Mi Galeria</a></p>
-          <p><a href="#">> Proyectos</a></p>
-          <p><a href="#" class="enlace-discreto">> Registro_00.dat</a></p>
+          <p><a href="https://github.com/kimontey">> Mi Github</a></p>
+          <p><a href="https://kimontey.neocities.org/Bienvenido" class="enlace-discreto">> Prueba tu suerte</a></p>
         </div>
 
       </aside>
@@ -114,6 +114,22 @@
           </div>
         </article>
         
+         <article class="retro-box post">
+          <img src="img/alien.gif" alt="mood" class="post-mood">
+          
+          <div class="post-header">
+            <h2>03: Actualizaciones</h2>
+            <span class="post-date">[ 2026.09.09 // 18:02 ]</span>
+          </div>
+          <hr>
+          <div class="post-body">
+            <p>No sé si se nota pero soy horrible escribiendo blogs XDDD. Soy mala para dar info.</p>
+            <p>Es cómo, finge que alguien está leyendo esto, pero en realidad no quieres que nadie lo lea. Pero al ponerlo en público es como de por si esperable que alguien lo lea. 
+              Una contradicción. Pero bueno, que se le va a hacer. No me importa mucho que alguien lea esto, pero tampoco quiero que nadie lo lea. Es un dilema existencial.</p>
+            </p>
+            <p> Cambiando de tema: Ahora los blogs tienen scroll!!!! yeii!!</p>
+          </div>
+        </article>
       </main>
 
     </div>
@@ -124,7 +140,22 @@
 
   </div>
 
+      <aside class="banner-sidebar-right">
+      <img src="img/miku-banner0.png" alt="banner 3">
+      <img src="img/miku-banner-derecho.jpg" alt="banner 1">
+      <img src="img/miku-banner-derecho2.jpg" alt="banner 2">
+      <img src="img/miku-banner-derecho3.jpg" alt="banner 3">
+    </aside>
+    
+
 </div><script>
+
+  const mainContent = document.querySelector('.main-content');
+  if (mainContent) {
+    const posts = Array.from(mainContent.querySelectorAll('.post'));
+    posts.reverse().forEach(post => mainContent.appendChild(post));
+  }
+
   const audio = document.getElementById('radioStream');
   const btn = document.getElementById('radioBtn');
 

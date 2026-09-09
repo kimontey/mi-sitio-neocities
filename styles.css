@@ -4,14 +4,29 @@
   --box-inner: #ffffff;
   --border-light: #ffffff;
   --border-dark: #404040;
-  --header-bg: #4385ab;
-  --widget-title-bg: #4291b3;
-  --accent-link: #ff2e88;
+  --header-bg: #31a4b1;
+  --widget-title-bg: #5abdbd;
+  --accent-link: #db6192;
 }
 
 * {
   box-sizing: border-box;
 }
+
+@font-face {                  
+font-family: 'F5.6';
+src: url(https://humantooth.neocities.org/fonts/F5.6-Regular.woff) format('woff');
+font-weight: normal;
+font-style: normal;
+} 
+
+
+@font-face {
+font-family: minecraftia;
+src: url(https://dl.dropbox.com/s/qrro6u0lx00x66j/Minecraftia-Regular.ttf?);
+}
+
+ 
 
 body {
   min-height: 100vh;
@@ -52,9 +67,28 @@ body {
   display: block;
 }
 
-.main-content {
-  flex: 10; 
+.banner-sidebar-right {
+  display: flex;
+  flex-direction: column; 
+  z-index: 1;
+  width: 150px; 
+  flex-shrink: 0;
 }
+
+.banner-sidebar-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main-content {
+  flex: 3 1 450px;
+  max-height: 520px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+}
+
 
 /* Envoltura general */
 .site-wrapper {
@@ -80,20 +114,21 @@ body {
 .header {
   text-align: center;
   background: var(--header-bg);
+  font-family: 'Minecraftia', cursive;
   color: #ffffff;
   margin-top: 40px; /* Espacio para las stickers decorativas superiores */
 }
 
 .header h1 {
-  margin: 0 0 5px 0;
+  margin: 0 0 00;
   font-size: 1.6rem;
   letter-spacing: 1px;
   word-break: break-word;
 }
 
 marquee {
-  background: #000000;
-  color: #69c7f0;
+  background: #b8ecec;
+  color: #000000;
   font-family: 'Courier New', monospace;
   font-weight: bold;
   padding: 4px;
@@ -110,9 +145,7 @@ marquee {
   flex: 1 1 260px;
 }
 
-.main-content {
-  flex: 3 1 450px;
-}
+
 
 /* Widgets */
 .widget h3 {
@@ -179,8 +212,8 @@ a {
 }
 
 a:hover {
-  background-color: #000000;
-  color: #0088ff;
+  background-color: #e577c61d;
+  color: #5abdbd;
   text-decoration: none;
 }
 
@@ -262,7 +295,7 @@ a:hover {
  .layout-container {
     flex-direction: column;
   }
-  .stamp-sidebar {
+  .stamp-sidebar,.banner-sidebar-right {
     flex-direction: row; 
     flex-wrap: wrap;
     width: 100%;
