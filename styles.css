@@ -13,12 +13,6 @@
   box-sizing: border-box;
 }
 
-@font-face {                  
-font-family: 'F5.6';
-src: url(https://humantooth.neocities.org/fonts/F5.6-Regular.woff) format('woff');
-font-weight: normal;
-font-style: normal;
-} 
 
 
 @font-face {
@@ -26,7 +20,11 @@ font-family: minecraftia;
 src: url(https://dl.dropbox.com/s/qrro6u0lx00x66j/Minecraftia-Regular.ttf?);
 }
 
- 
+ @font-face{
+    font-family:cakentruffles;
+    src:url(https://dl.dropbox.com/s/etvt9sk6o6fc27m/Cake%20n%20Truffles.ttf);
+}
+
 
 body {
   min-height: 100vh;
@@ -48,6 +46,24 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 20px; 
+}
+
+.content-column {
+  flex: 3 1 450px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.widget-bottom {
+  width: 100%;
+  margin-top: 15px;
+  padding: 8px;
+}
+
+.widget-bottom iframe {
+  display: block;
+  width: 100%;
 }
 
 .stamp-sidebar {
@@ -82,7 +98,7 @@ body {
 }
 
 .main-content {
-  flex: 3 1 450px;
+width: 100%;
   max-height: 520px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -114,7 +130,6 @@ body {
 .header {
   text-align: center;
   background: var(--header-bg);
-  font-family: 'Minecraftia', cursive;
   color: #ffffff;
   margin-top: 40px; /* Espacio para las stickers decorativas superiores */
 }
@@ -283,6 +298,10 @@ a:hover {
   border-right: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
   background: #a0a0a0;
+}
+
+.widget-bottom {
+  grid-column: 2; 
 }
 
 /* --- REGLAS RESPONSIVAS (MÓVIL / TABLET) --- */
