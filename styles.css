@@ -98,7 +98,7 @@ body {
 }
 
 .main-content {
-width: 100%;
+  width: 100%;
   max-height: 520px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -126,12 +126,17 @@ width: 100%;
   margin-bottom: 15px;
 }
 
+.header-image {
+  width: 100%;
+  height: auto;
+}
 /* Encabezado */
 .header {
+  font-family: 'Trispace', 'Courier New', monospace, sans-serif;
   text-align: center;
   background: var(--header-bg);
   color: #ffffff;
-  margin-top: 40px; /* Espacio para las stickers decorativas superiores */
+  margin-top: 5px; /* Espacio para las stickers decorativas superiores */
 }
 
 .header h1 {
@@ -307,44 +312,70 @@ a:hover {
 /* --- REGLAS RESPONSIVAS (MÓVIL / TABLET) --- */
 @media (max-width: 768px) {
   body {
-    padding: 10px;
-    background-size: 260px auto, auto; /* Reducir el sticker de fondo en pantallas medianas */
+    padding: 5px; 
+    background-size: 260px auto, auto;
   }
 
- .layout-container {
-    flex-direction: column;
+
+  .layout-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 6px;
+
+
+  .stamp-sidebar {
+    width: 45px;       
+    flex-shrink: 0;
+    gap: 5px;
   }
-  .stamp-sidebar,.banner-sidebar-right {
-    flex-direction: row; 
-    flex-wrap: wrap;
+
+  .stamp-sidebar img {
     width: 100%;
+    height: auto;
   }
+
+ 
+  .banner-sidebar-right {
+    width: 50px;    
+    flex-shrink: 0;
+    gap: 5px;
+  }
+
+  .banner-sidebar-right img {
+    width: 100%;
+    height: auto;
+  }
+
+ 
+  .site-wrapper {
+    min-width: 0;
+    flex: 1;
+  }
+
   .header {
-    margin-top: 60px;
+    margin-top: 15px;
   }
 
   .header h1 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
-  .header-miku {
-    width: 90px;
-    top: 5px;
-    right: 5px;
-  }
-
-  .miku-baile {
-    width: 100px;
-    top: 5px;
-    left: 5px;
-  }
 
   .layout-grid {
     flex-direction: column;
+    gap: 10px;
   }
 
-  .sidebar, .main-content {
+  .sidebar, 
+  .content-column, 
+  .main-content {
     flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .main-content {
+    max-height: 400px; 
   }
 }
 
@@ -360,4 +391,5 @@ a:hover {
   body {
     background-size: 180px auto, auto;
   }
+}
 }
