@@ -13,25 +13,18 @@
   box-sizing: border-box;
 }
 
-
-
-@font-face {
-font-family: minecraftia;
-src: url(https://dl.dropbox.com/s/qrro6u0lx00x66j/Minecraftia-Regular.ttf?);
+@font-face {                  
+font-family: 'AnalogueOS';
+src: url(https://humantooth.neocities.org/fonts/AnalogueOS-Regular.woff) format('woff');
+font-weight: normal;
 }
-
- @font-face{
-    font-family:cakentruffles;
-    src:url(https://dl.dropbox.com/s/etvt9sk6o6fc27m/Cake%20n%20Truffles.ttf);
-}
-
 
 body {
   min-height: 100vh;
   margin: 0;
   padding: 20px;
   background-color: var(--bg-fallback);
-  background-image: url("img/miku_below.gif"), url("img/background.jpg");
+  background-image: url("img/miku_below.gif"), url("img/background.gif");
   background-repeat: no-repeat, repeat;
   background-attachment: scroll, fixed;
   background-position: bottom right, top left;
@@ -132,7 +125,7 @@ body {
 }
 /* Encabezado */
 .header {
-  font-family: 'Trispace', 'Courier New', monospace, sans-serif;
+  font-family: 'AnalogueOS', 'Courier New', monospace, sans-serif;
   text-align: center;
   background: var(--header-bg);
   color: #ffffff;
@@ -140,15 +133,15 @@ body {
 }
 
 .header h1 {
-  margin: 0 0 00;
-  font-size: 1.6rem;
-  letter-spacing: 1px;
+  margin: 5px 0 10px 0;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
   word-break: break-word;
 }
 
 marquee {
   background: #b8ecec;
-  color: #000000;
+  color: #468a72;
   font-family: 'Courier New', monospace;
   font-weight: bold;
   padding: 4px;
