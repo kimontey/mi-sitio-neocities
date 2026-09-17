@@ -96,6 +96,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 8px;
+  margin-bottom: 10px;
 }
 
 
@@ -198,7 +199,7 @@ marquee {
   margin: 0;
   font-size: 1.25rem;
   color: var(--header-bg);
-  padding-right: 55px; /* Evita que el título se encime sobre el mood-gif */
+  padding-right: 55px; /
 }
 
 .post-date {
