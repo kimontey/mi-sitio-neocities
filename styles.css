@@ -41,6 +41,15 @@ body {
   gap: 20px; 
 }
 
+.garfield-img {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 160px; 
+  height: auto; 
+  z-index: 0; 
+}
+
 .content-column {
   flex: 3 1 450px;
   display: flex;
@@ -118,6 +127,13 @@ body {
   border-bottom: 2px solid var(--border-dark);
   padding: 12px;
   margin-bottom: 15px;
+}
+
+.hdecor-img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 5px;
+  float: left;
 }
 
 .header-image {
