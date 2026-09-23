@@ -215,7 +215,7 @@ marquee {
   margin: 0;
   font-size: 1.25rem;
   color: var(--header-bg);
-  padding-right: 55px; /
+  padding-right: 55px; 
 }
 
 .post-date {
@@ -315,91 +315,140 @@ a:hover {
   background: #a0a0a0;
 }
 
-.widget-bottom {
-  grid-column: 2; 
-}
 
 /* --- REGLAS RESPONSIVAS (MÓVIL / TABLET) --- */
-@media (max-width: 768px) {
+
+/* Tablet y móvil */
+@media (max-width: 900px) {
   body {
-    padding: 5px; 
+    padding: 8px;
     background-size: 260px auto, auto;
   }
 
-
+  /* Todo en una columna, el sitio primero */
   .layout-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 6px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
   }
 
+  .site-wrapper {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  /* Estampillas: fila horizontal debajo del sitio */
   .stamp-sidebar {
-    width: 45px;       
-    flex-shrink: 0;
-    gap: 5px;
+    order: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
   }
 
   .stamp-sidebar img {
-    width: 100%;
+    width: 70px;
     height: auto;
   }
 
- 
+  /* Banners: fila horizontal al final */
   .banner-sidebar-right {
-    width: 50px;    
-    flex-shrink: 0;
-    gap: 5px;
-  }
-
-  .banner-sidebar-right img {
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    gap: 8px;
+  }
+  .banner-sidebar-right img {
+    flex: 0 0 auto;
+    width: 150px;      
+    max-width: 100%;   
     height: auto;
   }
 
  
-  .site-wrapper {
-    min-width: 0;
-    flex: 1;
+  .banner-sidebar-right img:nth-child(2) {
+    flex: 0 0 100%;
+    width:auto;
+    max-width: 280px;
+    align-self: center;
   }
-
-  .header {
-    margin-top: 15px;
+ 
+  .garfield-img {
+    width: 80px;
+    opacity: 0.6;
   }
 
   .header h1 {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
   }
 
-
+  /* Sidebar del sitio y contenido en columna */
   .layout-grid {
     flex-direction: column;
     gap: 10px;
   }
 
-  .sidebar, 
-  .content-column, 
-  .main-content {
+  .sidebar,
+  .content-column {
     flex: 1 1 100%;
     width: 100%;
   }
 
   .main-content {
-    max-height: 400px; 
+    max-height: 450px;
+  }
+
+  /* El iframe del sudoku no se desborda */
+  .content-column iframe {
+    max-width: 100%;
   }
 }
 
+/* Móvil pequeño */
 @media (max-width: 480px) {
-  .header h1 {
-    font-size: 1.1rem;
-  }
-
-  .header-miku, .miku-baile {
-    width: 70px;
-  }
-  
   body {
+    font-size: 12pt;
     background-size: 180px auto, auto;
   }
-}
+
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .hdecor-img {
+    width: 60px;
+  }
+
+  .stamp-sidebar img {
+    width: 56px;
+  }
+
+  .banner-sidebar-right img {
+    width: 130px;
+    max-width: 100%;
+  }
+
+  .banner-sidebar-right img:nth-child(1) {
+    width: 240px;
+    max-width: 100%;
+  }
+
+  .garfield-img {
+    display: none; 
+  }
+
+  .post-mood {
+    width: 40px;
+  }
+
+  .main-content {
+    max-height: 380px;
+  }
 }
