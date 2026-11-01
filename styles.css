@@ -68,6 +68,8 @@ body {
   width: 100%;
 }
 
+
+
 .stamp-sidebar {
   display: flex;
   flex-direction: column; 
@@ -154,6 +156,24 @@ body {
   font-size: 2.5rem;
   letter-spacing: 0.5px;
   word-break: break-word;
+}
+
+#sudoku-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  justify-content: center;
+  gap: 20px; 
+  width: 100%;
+}
+
+
+.sudoku-decor {
+  width: 100%;
+  max-width: 260px;
+  height: 260px;
+  object-fit: cover;
+  display: block;
 }
 
 marquee {
@@ -313,6 +333,11 @@ a:hover {
   border-right: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
   background: #a0a0a0;
+}
+
+.sudoku-title {
+  text-align: center;
+  width: 100%;
 }
 
 

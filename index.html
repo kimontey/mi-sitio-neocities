@@ -76,7 +76,7 @@
             <li>Hatsune Miku & Vocaloid</li>
             <li>Juegos Indie</li>
             <li>Anime & Manga</li>
-            <li>Eneagrama y Tipología de Personalidad</li>
+            <li>Eneagrama & Tipología de Personalidad</li>
           </ul>
         </div>
 
@@ -131,17 +131,35 @@
             <hr>
             <div class="post-body">
               <p>No sé si se nota pero soy horrible escribiendo blogs XDDD. Soy mala para dar info.</p>
-              <p>Es cómo, finge que alguien está leyendo esto, pero en realidad no quieres que nadie lo lea. Pero al ponerlo en público es como de por si esperable que alguien lo lea. 
-                Una contradicción. Pero bueno, que se le va a hacer. No me importa mucho que alguien lea esto, pero tampoco quiero que nadie lo lea. Es un dilema existencial.</p>
+              <p>Es cómo, finge que alguien está leyendo esto, pero en realidad no quieres que nadie lo lea. Pero al ponerlo en público es como de por si esperable que alguien lo lea.</p>
               <p> Cambiando de tema: Ahora los blogs tienen scroll!!!! yeii!!</p>
+            </div>
+          </article>
+
+          <article class="retro-box post">
+            <img src="img/jelowin.gif" alt="mood" class="post-mood">
+            
+            <div class="post-header">
+              <h2>04: Happy Halloween</h2>
+              <span class="post-date">[ 2026.10.31 // 22:48 ]</span>
+            </div>
+            <hr>
+            <div class="post-body">
+              <p>When es halloween but te pones a editar tu sitio web :V</p>
+              <p>Aproveché de estudiar, aproveché de ordenar e incluso farmeé en un RNG de roblox. Que provechosa la vida cuando no sales de tu casa. Igualmente me habría gustado salir. Pero es realmente así? La verdad que ni me preocupé de pensar en que disfraz usaría, en un mundo ideal probablemente de Miku, en este mundo realmente de nada.  </p>
+              <p> Ah, y todavía sigo sin hacer la galería. Algún dia estará. Espero... </p>
             </div>
           </article>
 
         </main>
 
-       <div>
-        <IFRAME SRC="//widget.websudoku.com/?level=2" WIDTH="240" HEIGHT="260" SCROLLING="no" FRAMEBORDER="10"></IFRAME>
-       </div>
+    <div class="retro-box">
+      <h5 class="sudoku-title">★ SUDOKU ★</h5>
+      <div id="sudoku-wrapper">
+        <button class="retro-btn" onclick="cargarSudoku()">[ CARGAR SUDOKU ]</button>
+        <img src="img/sudoku_miku.gif" alt="sudoku" class="sudoku-decor">
+      </div>
+    </div>
 
       </div>
 
@@ -186,6 +204,22 @@
       btn.textContent = '[ REPRODUCIR ]';
     }
   }
+
+  function cargarSudoku() {
+  const wrapper = document.getElementById('sudoku-wrapper');
+  const btn = wrapper.querySelector('.retro-btn');
+  
+  // Reemplaza solo el botón por el iframe
+  if (btn) {
+    const iframe = document.createElement('iframe');
+    iframe.src = '//widget.websudoku.com/?level=2';
+    iframe.width = '240';
+    iframe.height = '260';
+    iframe.frameBorder = '0';
+    
+    wrapper.replaceChild(iframe, btn);
+  }
+}
 
     
 </script>
